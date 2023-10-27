@@ -1,7 +1,6 @@
 import { siteConfig } from '@/config/site';
 import { fontSans } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
-import { TooltipProvider } from '@/components/plate-ui/tooltip';
 import { SiteHeader } from '@/components/site/site-header';
 import { ThemeProvider } from '@/components/site/theme-provider';
 
@@ -43,16 +42,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="light">
-            <TooltipProvider
-              disableHoverableContent
-              delayDuration={500}
-              skipDelayDuration={0}
-            >
-              <div className="relative flex min-h-screen flex-col">
-                <SiteHeader />
-                <div className="flex-1">{children}</div>
-              </div>
-            </TooltipProvider>
+            <div className="relative flex min-h-screen flex-col">
+              <SiteHeader />
+              <div className="flex-1">{children}</div>
+            </div>
           </ThemeProvider>
         </body>
       </html>
