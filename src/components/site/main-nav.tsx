@@ -1,13 +1,11 @@
 import * as React from 'react';
 import Image from 'next/image';
 
-import { NavItem } from '@/types/nav';
+// interface MainNavProps {
+//   items?: NavItem[];
+// }
 
-interface MainNavProps {
-  items?: NavItem[];
-}
-
-export function MainNav({ items }: MainNavProps) {
+export function MainNav() {
   return (
     <div className="flex gap-6 md:gap-10">
       <div className="flex max-w-[980px] items-center gap-2">

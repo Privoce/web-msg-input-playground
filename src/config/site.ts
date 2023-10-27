@@ -1,18 +1,10 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: 'Next.js',
-  description:
-    'Rich-text editor components built with Radix UI and Tailwind CSS.',
-  mainNav: [
-    {
-      title: 'Home',
-      href: '/',
-    },
-  ],
+  name: 'VoceChat Message Input Playground',
+  description: 'Just for demo',
   links: {
-    twitter: 'https://twitter.com/zbeyens',
-    github: 'https://github.com/udecode/plate',
-    docs: 'https://platejs.org',
+    twitter: 'https://twitter.com/wsygc',
+    github: 'https://github.com/Privoce/web-msg-input-playground',
   },
 };
