@@ -5,7 +5,7 @@ import {
   useEmojiDropdownMenuState,
 } from '@udecode/plate-emoji';
 
-import { EmojiToolbarDropdown } from '@/components/plate-ui/emoji-toolbar-dropdown';
+import { EmojiPopup } from '@/components/plate-ui/emoji-popup';
 
 import { emojiCategoryIcons, emojiSearchIcons } from './emoji-icons';
 import { EmojiPicker } from './emoji-picker';
@@ -24,7 +24,7 @@ export function EmojiDropdownInput({
     setIsOpen(!isOpen);
   };
   return (
-    <EmojiToolbarDropdown
+    <EmojiPopup
       control={
         <button className="relative h-6 w-6" onClick={handleClick} {...props}>
           <Image fill src={'/smile.emoji.svg'} alt="smile emoji" />
@@ -43,6 +43,6 @@ export function EmojiDropdownInput({
         }}
         settings={options?.settings}
       />
-    </EmojiToolbarDropdown>
+    </EmojiPopup>
   );
 }

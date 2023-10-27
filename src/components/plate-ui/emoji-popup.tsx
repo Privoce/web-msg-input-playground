@@ -1,19 +1,19 @@
 import React, { ReactNode } from 'react';
 import * as Popover from '@radix-ui/react-popover';
 
-type EmojiToolbarDropdownProps = {
+type EmojiPopupProps = {
   control: ReactNode;
   isOpen: boolean;
   setIsOpen: (open: boolean) => void;
   children: ReactNode;
 };
 
-export function EmojiToolbarDropdown({
+export function EmojiPopup({
   control,
   isOpen,
   setIsOpen,
   children,
-}: EmojiToolbarDropdownProps) {
+}: EmojiPopupProps) {
   return (
     <Popover.Root open={isOpen} onOpenChange={setIsOpen}>
       <Popover.Trigger asChild>{control}</Popover.Trigger>
