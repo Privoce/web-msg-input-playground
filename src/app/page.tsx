@@ -21,7 +21,7 @@ export default function IndexPage() {
     <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
       <div className=" max-w-[1336px]">
         <div className="h-[600px] overflow-y-auto">
-          <h2>Input:</h2>
+          <h2>Message List:</h2>
           <div className="flex flex-col gap-2">
             {messages.map((m, idx) => {
               return (
