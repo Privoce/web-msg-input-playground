@@ -1,5 +1,4 @@
 import { siteConfig } from '@/config/site';
-import { fontSans } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 import { SiteHeader } from '@/components/site/site-header';
 import { ThemeProvider } from '@/components/site/theme-provider';
@@ -37,8 +36,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <body
           className={cn(
             'min-h-screen bg-background font-sans antialiased',
-            '[&_.slate-selected]:!bg-primary/20 [&_.slate-selection-area]:border [&_.slate-selection-area]:border-primary [&_.slate-selection-area]:bg-primary/10',
-            fontSans.variable
+            '[&_.slate-selected]:!bg-primary/20 [&_.slate-selection-area]:border [&_.slate-selection-area]:border-primary [&_.slate-selection-area]:bg-primary/10'
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="light">
