@@ -25,13 +25,21 @@ export default function IndexPage() {
           <div className="flex flex-col gap-2">
             {messages.map((m, idx) => {
               return (
-                <div key={idx} className="relative flex flex-col gap-1">
+                <div
+                  key={idx}
+                  className="relative flex flex-col gap-2 rounded bg-slate-100 p-2"
+                >
                   <div className="flex-1 whitespace-pre bg-green-100 p-2">
                     {m.text}
                   </div>
-                  <span>
-                    mentions: <em>{m.mentions.map((m) => m).join(',')}</em>
-                  </span>
+                  {m.mentions.length > 0 && (
+                    <span className="bg-fuchsia-200 p-2">
+                      mentions:{' '}
+                      <em className="text-xs not-italic">
+                        {m.mentions.map((m) => m).join(',')}
+                      </em>
+                    </span>
+                  )}
                   <button
                     className="absolute right-1 top-1"
                     onClick={handleDelete.bind(null, idx)}
