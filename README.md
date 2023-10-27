@@ -1,3 +1,3 @@
 # Playground for Vocechat message input
 
-[playground address](https://privoce.github.io/vocechat-playground/)
+[playground address](https://web-msg-input-playground.vercel.com/)
