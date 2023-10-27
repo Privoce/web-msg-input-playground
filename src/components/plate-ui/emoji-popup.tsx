@@ -19,7 +19,12 @@ export function EmojiPopup({
       <Popover.Trigger asChild>{control}</Popover.Trigger>
 
       <Popover.Portal>
-        <Popover.Content align="start" sideOffset={20} className="z-[100]">
+        <Popover.Content
+          align="start"
+          alignOffset={-12}
+          sideOffset={20}
+          className="z-[100]"
+        >
           {children}
         </Popover.Content>
       </Popover.Portal>
