@@ -1,7 +1,7 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { siteConfig } from '@/config/site';
-import { Icons } from '@/components/icons';
 import { MainNav } from '@/components/site/main-nav';
 import { ThemeToggle } from '@/components/site/theme-toggle';
 
@@ -17,7 +17,12 @@ export function SiteHeader() {
               target="_blank"
               rel="noreferrer"
             >
-              <Icons.gitHub className="h-5 w-5" />
+              <Image
+                width={20}
+                height={20}
+                src={'/github.svg'}
+                alt="search icon"
+              />
             </Link>
             <ThemeToggle />
           </nav>

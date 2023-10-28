@@ -1,8 +1,8 @@
 import React from 'react';
+import Image from 'next/image';
 import { UseEmojiPickerType } from '@udecode/plate-emoji';
 
 import { cn } from '@/lib/utils';
-import { Icons } from '@/components/icons';
 
 export type EmojiPickerSearchAndClearProps = Pick<
   UseEmojiPickerType,
@@ -21,7 +21,7 @@ export function EmojiPickerSearchAndClear({
           'absolute left-2 top-1/2 z-10 flex h-5 w-5 -translate-y-1/2'
         )}
       >
-        <Icons.search />
+        <Image fill src={'/search.svg'} alt="search icon" />
       </span>
       {searchValue && (
         <button
@@ -33,7 +33,7 @@ export function EmojiPickerSearchAndClear({
           )}
           onClick={clearSearch}
         >
-          <Icons.clear className="h-full w-full" />
+          <Image fill src={'/close.circle.svg'} alt="close icon" />
         </button>
       )}
     </>
